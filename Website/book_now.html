@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EXPLORE TOURS & TRAVELS</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/booknow_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script>
+        function finalCost(){
+            var roomType = document.getElementById("room_type").value;
+            var roomNum = document.getElementById("room_number").value;
+            var personNum = document.getElementById("person_number").value;
+            var childNum = document.getElementById("child_number").value;
+            var resFacilities = document.getElementById("res_facilities").value;
+
+            var total = (parseInt(roomType)*10) + ((roomNum)*2) + ((personNum)*3) + ((childNum)*2) + ((resFacilities)*5)
+
+            document.getElementById("result").innerHTML = total;
+        }
+    </script>
+    </head>
+<body>
+<!-- HEADER PART -->
+	<header>
+		<div class="main">
+            <div class="logo">
+				<img src="logo.png">
+			</div>
+		    <ul>
+			     <li><a href="index.html">HOME</a></li>
+                <li  class="active"><a href="#">BOOK NOW</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="About_us.html">ABOUT US</a></li>
+                <li><a href="contact_us.html">CONTACT US</a></li>
+		    </ul>  
+        </div>
+        <div class="title">
+                   <h1>Explore Tours & Travels</h1>
+                   <h2>_______Create Memories That Give Happiness_______</h2><br>
+        </div>
+
+    </header>  
+<!-- END OF HEADER PART --> 
+<!--START OF BOOKING FORM-->
+ <div class="hotel_reserve_box">
+         <h3> Hotel Reservation Form </h3><br>
+         <form>
+             <div class="form-group">
+                 <label>Room/Suite Type</label>
+                 <select class="form-control" id="room_type" onchange="finalCost()">
+                     <option value="0" selected>Select Room/Suite </option>
+                     <option value="1"> Standard </option>
+                     <option value="2"> Deluxe </option>
+                     <option value="3"> Superior Deluxe </option>
+                     <option value="4"> Premier Deluxe  </option>
+                     <option value="5"> Executive Suite </option>
+                     <option value="6"> Junior Suite </option>
+                     <option value="7"> Honeymoon Suite </option>
+                 </select>
+             </div>
+             <div class="form-group">
+                 <label>Number of room/suite</label>
+                 <select class="form-control" id="room_number" onchange="finalCost()">
+                     <option value="0"> 0 </option>
+                     <option value="1"> 1 </option>
+                     <option value="2"> 2 </option>
+                     <option value="3"> 3 </option>
+                     <option value="4"> 4 </option>
+                     <option value="5"> 5 </option>
+                     <option value="6"> 6 </option>
+                     <option value="7"> 7 </option>
+                 </select>
+             </div>
+             <div class="form-group">
+                 <label>Number of persons</label>
+                 <select class="form-control" id="person_number" onchange="finalCost()">
+                     <option value="0"> 0 </option>
+                     <option value="1"> 1 </option>
+                     <option value="2"> 2 </option>
+                     <option value="3"> 3 </option>
+                     <option value="4"> 4 </option>
+                     <option value="5"> 5 </option>
+                     <option value="6"> 6 </option>
+                     <option value="7"> 7 </option>
+                 </select>
+             </div>
+             <div class="form-group">
+                 <label>Number of children</label>
+                 <select class="form-control" id="child_number" onchange="finalCost()">
+                     <option value="0"> 0 </option>
+                     <option value="1"> 1 </option>
+                     <option value="2"> 2 </option>
+                     <option value="3"> 3 </option>
+                     <option value="4"> 4 </option>
+                     <option value="5"> 5 </option>
+                     <option value="6"> 6 </option>
+                     <option value="7"> 7 </option>
+                 </select>
+             </div>
+             <div class="form-group">
+                 <label>Restaurant facilities?</label>
+                 <select class="form-control" id="res_facilities" onchange="finalCost()">
+                     <option value="0" selected> Do you want restaurant facilities? </option>
+                     <option value="2"> Yes </option>
+                     <option value="0"> No </option>
+                 </select>
+             </div><br>
+             <div class="form-group">
+                 <label>Total Cost ($) : </label>
+                 <span id="result" style="background-color: #7527b0;color: #fff;padding: 6px 70px;font-weight: 600;font-size: 18px; margin-left: 10px;border-radius: 5px;">0</span>
+             </div>
+         </form>
+     </div>
+<!--END OF BOOKING FORM-->
+<!-- START OF FOOTER PART-->
+<footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h3>Find us</h3>
+                                <span>AA/Block-2/101,ManiRatnam residency,Ankleshwar</span>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fa-fa-phone"></i>
+                            <div class="cta-text">
+                                <h3>Call us</h3>
+                                <span>(+91)8320750650,</span>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fa-fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h3>Mail us</h3>
+                                <span>shantanudutta@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html"><img src="logo.PNG" class="img-fluid" alt="logo"></a>
+                            </div>
+                            <div class="footer-text">
+                                <p>Thanks for visiting our website.Hope you like our deals.<br>Have a nice vacation with our agency. VISIT AGAIN</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us on</span>
+                                <a href="www.facebook.com"><i class="fa fa-facebook"></i></a>
+                                <a href="www.twitter.com"><i class="fa fa-twitter"></i></a>
+                                <a href="www.google.com"><i class="fa fa-google plus"></i></a>
+                                <a href="www.instagram.com"><i class="fa fa-instagram"></i></a>
+                                <a href="www.skype.com"><i class="fa fa-skype"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2020, All Right Reserved</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="About_us.html">About us</a></li>
+                                <li><a href="contact_us.html">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- END OF FOOTER PART-->
+</body>
+</html>
